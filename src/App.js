@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>Weather App</h1>
+      <p></p>
+      <footer>
+        Created by Tatiana Bugulova using React and{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/TAffinity/weather-react"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Learn React
+          posted in GitHUB
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
