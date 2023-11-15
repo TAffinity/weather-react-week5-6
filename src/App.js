@@ -1,14 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Weather from "./Weather";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <p>
-        <button className="btn btn-primary">Нажми меня</button>
-      </p>
+      <h2>Weather App</h2>
+      <Weather />
       <footer>
         Created by Tatiana Bugulova using React and{" "}
         <a
