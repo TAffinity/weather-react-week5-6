@@ -21,13 +21,14 @@
   line-height: 19px;
   list-style: none;
 }
-.Weather img {
-  height: 72px;
-  width: 72px;
+.Weather canvas {
+  /* height: 50px; */
+  /* width: 50px; */
   margin-right: 10px;
   display: inline-block;
   position: relative;
-  top: -18px;
+  margin-top: 2px;
+  /* top: 3px  это если хочу двигать только картинку */
 }
 .Weather .temperature {
   font-weight: bold;
