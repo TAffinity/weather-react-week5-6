@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WeatherIcon from "./WeatherIcon";
+
 import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
@@ -19,10 +19,32 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
+          {forecast.map(function (dailyForecast, index) {
+            if (index > 0 && index <= 7) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+          {/* <WeatherForecastDay data={forecast[0]} /> */}
+        </div>
+        {/* или чтобы сделать на несколько дней, 
+          можно просто вызвать компонент столько раз 
+          сколько мне нужно, но это не будет красиво...
+          это вариант для трех дней
+           <div className="col"> 
             <WeatherForecastDay data={forecast[0]} />
           </div>
-        </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[1]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[1]} />
+          </div>*/}
       </div>
     );
   } else {
